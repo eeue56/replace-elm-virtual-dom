@@ -1,0 +1,19 @@
+Elm.VirtualDom = Elm.VirtualDom || {};
+Elm.VirtualDom.make = function (_elm) {
+   "use strict";
+   _elm.VirtualDom = _elm.VirtualDom || {};
+   if (_elm.VirtualDom.values) return _elm.VirtualDom.values;
+   var _U = Elm.Native.Utils.make(_elm),
+   $Basics = Elm.Basics.make(_elm),
+   $Debug = Elm.Debug.make(_elm),
+   $List = Elm.List.make(_elm),
+   $Maybe = Elm.Maybe.make(_elm),
+   $Native$FakeVirtualDom = Elm.Native.FakeVirtualDom.make(_elm),
+   $Result = Elm.Result.make(_elm),
+   $Signal = Elm.Signal.make(_elm);
+   var _op = {};
+   var create = function (name) {    return $Native$FakeVirtualDom.createNode(name);};
+   var Html = {ctor: "Html"};
+   var _p0 = 5;
+   return _elm.VirtualDom.values = {_op: _op,Html: Html,create: create};
+};

@@ -1,0 +1,18 @@
+Elm.Convert = Elm.Convert || {};
+Elm.Convert.make = function (_elm) {
+   "use strict";
+   _elm.Convert = _elm.Convert || {};
+   if (_elm.Convert.values) return _elm.Convert.values;
+   var _U = Elm.Native.Utils.make(_elm),
+   $Basics = Elm.Basics.make(_elm),
+   $Debug = Elm.Debug.make(_elm),
+   $Html = Elm.Html.make(_elm),
+   $List = Elm.List.make(_elm),
+   $Maybe = Elm.Maybe.make(_elm),
+   $Native$FakeVirtualDom = Elm.Native.FakeVirtualDom.make(_elm),
+   $Result = Elm.Result.make(_elm),
+   $Signal = Elm.Signal.make(_elm);
+   var _op = {};
+   var toHtml = $Native$FakeVirtualDom.toHtml;
+   return _elm.Convert.values = {_op: _op,toHtml: toHtml};
+};

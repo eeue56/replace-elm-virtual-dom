@@ -10,3 +10,7 @@ type Html = Html
 create : String -> Html
 create name =
     Native.FakeVirtualDom.createNode name
+
+initGraphics : Signal a -> ()
+initGraphics =
+    Native.FakeVirtualDom.initGraphics

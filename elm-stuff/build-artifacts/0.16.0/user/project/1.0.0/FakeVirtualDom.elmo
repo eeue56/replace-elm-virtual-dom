@@ -12,8 +12,9 @@ Elm.FakeVirtualDom.make = function (_elm) {
    $Result = Elm.Result.make(_elm),
    $Signal = Elm.Signal.make(_elm);
    var _op = {};
+   var initGraphics = $Native$FakeVirtualDom.initGraphics;
    var create = function (name) {    return $Native$FakeVirtualDom.createNode(name);};
    var Html = {ctor: "Html"};
    var _p0 = 5;
-   return _elm.FakeVirtualDom.values = {_op: _op,Html: Html,create: create};
+   return _elm.FakeVirtualDom.values = {_op: _op,Html: Html,create: create,initGraphics: initGraphics};
 };

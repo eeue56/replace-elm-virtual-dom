@@ -8,12 +8,17 @@ Elm.Main.make = function (_elm) {
    $Convert = Elm.Convert.make(_elm),
    $Debug = Elm.Debug.make(_elm),
    $FakeVirtualDom = Elm.FakeVirtualDom.make(_elm),
+   $Html = Elm.Html.make(_elm),
    $List = Elm.List.make(_elm),
    $Maybe = Elm.Maybe.make(_elm),
    $Result = Elm.Result.make(_elm),
    $Signal = Elm.Signal.make(_elm);
    var _op = {};
+   var main$ = $FakeVirtualDom.initGraphics(A2($Signal.map,
+   function (_p0) {
+      return A2($Html.div,_U.list([]),_U.list([$Html.text("hello dave")]));
+   },
+   $Signal.constant(1)));
    var aDiv = $Convert.toHtml($FakeVirtualDom.create("div"));
-   var main = aDiv;
-   return _elm.Main.values = {_op: _op,aDiv: aDiv,main: main};
+   return _elm.Main.values = {_op: _op,aDiv: aDiv,main$: main$};
 };
